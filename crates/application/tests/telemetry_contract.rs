@@ -14,11 +14,6 @@ const SYNTHETIC_PROVIDER_LONG_TOKEN: &str = "fakeToken0123456789ABCDEFGHIJKLMNOP
 #[test]
 fn config_snapshot_matches_worker_contract_fields() {
     let snapshot = TelemetryConfigSnapshot {
-        background_mode_enabled: true,
-        wrist_overlay_enabled: false,
-        ovrt_wrist_notifications: false,
-        hmd_notifications_enabled: true,
-        webhook_enabled: false,
         auto_state_change_enabled: false,
         auto_accept_invite_requests: "off".into(),
         avatar_auto_cleanup: "off".into(),
@@ -43,18 +38,13 @@ fn config_snapshot_matches_worker_contract_fields() {
         "autoAcceptInviteRequests",
         "autoStateChangeEnabled",
         "avatarAutoCleanup",
-        "backgroundModeEnabled",
         "dbSizeBucket",
         "feedRowsBucket",
         "friendCountBucket",
         "friendLogRowsBucket",
         "gamelogRowsBucket",
-        "hmdNotificationsEnabled",
-        "ovrtWristNotifications",
         "themeMode",
         "vrcxOrigin",
-        "webhookEnabled",
-        "wristOverlayEnabled",
     ];
     let mut sorted = keys.clone();
     sorted.sort_unstable();

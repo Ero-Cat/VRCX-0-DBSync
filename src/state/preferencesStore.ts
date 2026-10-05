@@ -26,6 +26,10 @@ import {
 import { MINUTES_PER_DAY } from '@/shared/constants/time';
 import { TRUST_COLOR_DEFAULTS } from '@/shared/constants/trustColors';
 import { DEFAULT_GENERIC_WEBHOOK_FIELDS } from '@/shared/constants/webhook';
+import {
+    USER_NAME_COLOUR_STYLES,
+    type UserNameColourStyle
+} from '@/shared/utils/entityMedia';
 import { normalizeTrustColors } from '@/shared/utils/trustColors';
 
 import { normalizeNavWidth, normalizeTableDensity } from './shellStore';
@@ -136,6 +140,14 @@ export function normalizeFeedTimeDisplayMode(
     value: unknown
 ): FeedTimeDisplayModePreference {
     return value === 'exact' ? 'exact' : 'relative';
+}
+
+export function normalizeUserNameColourStyle(
+    value: unknown
+): UserNameColourStyle {
+    return (
+        USER_NAME_COLOUR_STYLES.find((style) => style === value) ?? 'classic'
+    );
 }
 
 export function normalizeTranslationApiType(
@@ -311,6 +323,8 @@ export const DEFAULT_PREFERENCES = Object.freeze({
     showUserDialogAvatarFrame: true,
     showUserDialogProfileEffect: true,
     showUserDialogNameplateEffect: true,
+    showSidebarAvatarFrame: true,
+    showSidebarNameplate: true,
     weekStartsOn: 1,
     dtIsoFormat: false,
     dtHour12: false,
@@ -320,6 +334,7 @@ export const DEFAULT_PREFERENCES = Object.freeze({
     hideUnfriends: false,
     profileBioScanEnabled: false,
     randomUserColours: false,
+    randomUserColourStyle: 'classic',
     notificationIconDot: true,
     taskbarIconDot: true,
     showPostUpdateChangelogToast: true,
@@ -491,6 +506,8 @@ export function normalizePreferenceSnapshot(snapshot: unknown = {}) {
         showUserDialogNameplateEffect: normalizeBool(
             next.showUserDialogNameplateEffect
         ),
+        showSidebarAvatarFrame: normalizeBool(next.showSidebarAvatarFrame),
+        showSidebarNameplate: normalizeBool(next.showSidebarNameplate),
         weekStartsOn: normalizeWeekStartsOn(next.weekStartsOn),
         dtIsoFormat: normalizeBool(next.dtIsoFormat),
         dtHour12: normalizeBool(next.dtHour12),
@@ -500,6 +517,9 @@ export function normalizePreferenceSnapshot(snapshot: unknown = {}) {
         hideUnfriends: normalizeBool(next.hideUnfriends),
         profileBioScanEnabled: normalizeBool(next.profileBioScanEnabled),
         randomUserColours: normalizeBool(next.randomUserColours),
+        randomUserColourStyle: normalizeUserNameColourStyle(
+            next.randomUserColourStyle
+        ),
         notificationIconDot: normalizeBool(next.notificationIconDot),
         taskbarIconDot: normalizeBool(next.taskbarIconDot),
         showPostUpdateChangelogToast: normalizeBool(

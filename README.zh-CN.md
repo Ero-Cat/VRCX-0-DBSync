@@ -87,6 +87,7 @@ macOS 首次启动如被系统拦截，请前往 **系统设置 → 隐私与安
 
 - 交流与提问：[Discord](https://discord.gg/fehKP3SVPN)
 - 问题反馈与功能建议：[GitHub Issues](https://github.com/Map1en/VRCX-0/issues)
+- 开发 blog：[blog.vrcx-0.dev](https://blog.vrcx-0.dev/zh/)
 
 ## 从源码构建
 

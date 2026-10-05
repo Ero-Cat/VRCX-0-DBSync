@@ -36,11 +36,6 @@ pub enum TelemetryVrcxOrigin {
 #[derive(Clone, Debug, Serialize)]
 #[serde(rename_all = "camelCase")]
 pub struct TelemetryConfigSnapshot {
-    pub background_mode_enabled: bool,
-    pub wrist_overlay_enabled: bool,
-    pub ovrt_wrist_notifications: bool,
-    pub hmd_notifications_enabled: bool,
-    pub webhook_enabled: bool,
     pub auto_state_change_enabled: bool,
     pub auto_accept_invite_requests: String,
     pub avatar_auto_cleanup: String,

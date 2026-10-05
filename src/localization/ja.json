@@ -1458,7 +1458,8 @@
                 "local_favorite_group_renamed": "ローカルお気に入りグループの名前を変更しました",
                 "the_favorites_baseline_did_not_finish_loading": "お気に入りの読み込みが完了しませんでした",
                 "try_a_different_search_term": "別の検索語を試してください",
-                "online_favorites_copy_hint": "VRChat のお気に入りは、VRChat のグループ間でのみ移動できます。すでに VRChat のお気に入りに登録されているアイテムは、別の VRChat のグループへコピーできません。"
+                "online_favorites_copy_hint": "VRChat のお気に入りは、VRChat のグループ間でのみ移動できます。すでに VRChat のお気に入りに登録されているアイテムは、別の VRChat のグループへコピーできません。",
+                "sort_by_custom": "カスタム順"
             },
             "success": {
                 "favorite_removed": "お気に入りを削除しました",
@@ -1556,6 +1557,13 @@
                     "too_many": "一度に共有できるワールドは最大 {cap} 件です。グループを分割してください。",
                     "skipped": "共有しました。{count} 件をスキップしました（未同期または情報不足）。"
                 }
+            },
+            "order": {
+                "edit": "並び順を編集",
+                "exit_edit": "完了",
+                "hint": "カードをドラッグして並べ替えるか、選択して先頭・末尾へ移動できます。",
+                "move_to_bottom": "末尾へ移動",
+                "move_to_top": "先頭へ移動"
             }
         },
         "friend_log": {
@@ -1630,7 +1638,8 @@
                 "invite": "招待する",
                 "decline": "断る",
                 "delete_log": "通知を削除",
-                "decline_with_message": "メッセージを添えて断る"
+                "decline_with_message": "メッセージを添えて断る",
+                "ignore_locally": "ローカルで無視"
             },
             "filters": {
                 "requestInvite": "招待リクエスト",
@@ -1715,7 +1724,8 @@
                 "invite_response_sent": "返信を送信しました",
                 "boop_sent": "つっつきを送信しました",
                 "notification_response_sent": "返信しました",
-                "notification_log_entry_deleted": "通知を履歴から削除しました"
+                "notification_log_entry_deleted": "通知を履歴から削除しました",
+                "notification_ignored_locally": "ローカルで無視しました"
             },
             "error": {
                 "cannot_invite_no_current_vrchat_location_is_available": "招待できません: 現在インスタンスにいません",
@@ -2641,9 +2651,16 @@
                         "placeholder": "並べ替え"
                     }
                 },
+                "profile_appearance": {
+                    "header": "プロフィールの外観",
+                    "sidebar": "サイドバー",
+                    "sidebar_avatar_frame": "アイコンフレームを表示",
+                    "sidebar_avatar_frame_description": "フレンドサイドバーのアイコンにフレームを表示します。",
+                    "sidebar_nameplate": "ネームプレートを表示",
+                    "sidebar_nameplate_description": "フレンドサイドバーの各行の右側にネームプレートを表示します。"
+                },
                 "user_dialog": {
                     "header": "ユーザーダイアログ",
-                    "profile_appearance": "プロフィールの外観",
                     "profile_background": "プロフィール背景を表示",
                     "profile_background_description": "VRChat で設定されているグラデーションまたはテクスチャの背景を表示します。",
                     "avatar_frame": "アイコンフレームを表示",
@@ -2652,7 +2669,6 @@
                     "profile_effect_description": "ユーザー情報全体に適用されるプロフィールエフェクトを表示します。",
                     "nameplate_effect": "ネームプレートテーマを表示",
                     "nameplate_effect_description": "表示名の背景に適用されるネームプレートテーマを表示します。",
-                    "additional_information": "その他の情報",
                     "vrchat_notes": "VRChat のノート",
                     "vrchat_notes_description": "VRChat のノートを表示",
                     "vrcx_memos": "ローカルノート",
@@ -2664,6 +2680,13 @@
                     "header": "ユーザーの色",
                     "random_colors_from_user_id": "ユーザーごとに固定の色を使う",
                     "random_colors_from_user_id_description": "ユーザーIDをもとに、ユーザーごとに常に同じ色を割り当てます。",
+                    "random_color_style": "配色",
+                    "random_color_styles": {
+                        "classic": "クラシック",
+                        "pastel": "パステル",
+                        "warm": "暖色系",
+                        "cool": "寒色系"
+                    },
                     "trust_colors": "トラストランクの色",
                     "trust_colors_description": "トラストランク名に使う色を調整します。",
                     "trust_levels": {
@@ -3317,7 +3340,8 @@
                 "failed_to_create_local_favorite_group": "ローカルお気に入りグループの作成に失敗しました",
                 "failed_to_copy_selected_favorites": "選択したお気に入りのコピーに失敗しました",
                 "failed_to_move_selected_favorites": "選択したお気に入りの移動に失敗しました",
-                "favorites_refresh_unavailable": "アカウントにログインしていないため、お気に入りを更新できません"
+                "favorites_refresh_unavailable": "アカウントにログインしていないため、お気に入りを更新できません",
+                "failed_to_save_order": "並び順を保存できませんでした"
             },
             "modal": {
                 "remove_local_favorite": "ローカルお気に入りを削除しますか？",
@@ -3404,6 +3428,7 @@
                 "failed_to_delete_notification": "通知の削除に失敗しました",
                 "failed_to_accept_friend_request": "フレンドリクエストの承認に失敗しました",
                 "failed_to_decline_notification": "通知を断れませんでした",
+                "failed_to_ignore_notification": "通知を無視できませんでした",
                 "failed_to_send_invite": "招待の送信に失敗しました",
                 "invite_response_photo_sent": "写真付きの返信を送信しました",
                 "invite_response_sent": "返信を送信しました",
@@ -5981,7 +6006,12 @@
             "vrchat_must_be_closed": "変更を適用するには、VRChat を閉じてください"
         },
         "error": "エラー",
-        "update_success": "更新に成功しました"
+        "update_success": "更新に成功しました",
+        "external_link": {
+            "open_failed": "ブラウザでリンクを開けませんでした",
+            "copy_link": "リンクをコピー",
+            "copied": "リンクをクリップボードにコピーしました"
+        }
     },
     "notifications": {
         "has_joined": "が参加しました",

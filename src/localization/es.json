@@ -1462,7 +1462,8 @@
                 "local_favorite_group_renamed": "Grupo de favoritos local renombrado",
                 "the_favorites_baseline_did_not_finish_loading": "Los favoritos no terminaron de cargarse",
                 "try_a_different_search_term": "Prueba con otro término de búsqueda",
-                "online_favorites_copy_hint": "Los favoritos de VRChat solo se pueden mover entre grupos de VRChat. Los elementos que ya están en favoritos de VRChat no se pueden copiar a otro grupo de VRChat."
+                "online_favorites_copy_hint": "Los favoritos de VRChat solo se pueden mover entre grupos de VRChat. Los elementos que ya están en favoritos de VRChat no se pueden copiar a otro grupo de VRChat.",
+                "sort_by_custom": "Orden personalizado"
             },
             "success": {
                 "favorite_removed": "Favorito eliminado",
@@ -1560,6 +1561,13 @@
                     "too_many": "Puedes compartir hasta {cap} mundos a la vez. Divide este grupo primero.",
                     "skipped": "Compartido. Se omitieron {count} mundos (sin sincronizar o incompletos)."
                 }
+            },
+            "order": {
+                "edit": "Editar orden",
+                "exit_edit": "Listo",
+                "hint": "Arrastra las tarjetas para reordenarlas o selecciónalas y muévelas al principio o al final.",
+                "move_to_bottom": "Mover al final",
+                "move_to_top": "Mover al principio"
             }
         },
         "friend_log": {
@@ -1635,7 +1643,8 @@
                 "invite": "Invitar",
                 "decline": "Rechazar",
                 "delete_log": "Eliminar notificación",
-                "decline_with_message": "Rechazar con mensaje"
+                "decline_with_message": "Rechazar con mensaje",
+                "ignore_locally": "Ignorar localmente"
             },
             "filters": {
                 "requestInvite": "Solicitud para unirse",
@@ -1720,7 +1729,8 @@
                 "invite_response_sent": "Respuesta enviada",
                 "boop_sent": "Boop enviado",
                 "notification_response_sent": "Respuesta enviada",
-                "notification_log_entry_deleted": "Notificación eliminada del historial"
+                "notification_log_entry_deleted": "Notificación eliminada del historial",
+                "notification_ignored_locally": "Ignorada localmente"
             },
             "error": {
                 "cannot_invite_no_current_vrchat_location_is_available": "No se puede invitar: ahora mismo no estás en ninguna instancia",
@@ -2647,9 +2657,16 @@
                         "placeholder": "Ordenar por"
                     }
                 },
+                "profile_appearance": {
+                    "header": "Apariencia del perfil",
+                    "sidebar": "Barra lateral",
+                    "sidebar_avatar_frame": "Mostrar marco del avatar",
+                    "sidebar_avatar_frame_description": "Muestra el marco decorativo alrededor de los avatares en la barra lateral de amigos.",
+                    "sidebar_nameplate": "Mostrar placa de nombre",
+                    "sidebar_nameplate_description": "Muestra la placa de nombre a la derecha de cada fila en la barra lateral de amigos."
+                },
                 "user_dialog": {
                     "header": "Ventana de usuario",
-                    "profile_appearance": "Apariencia del perfil",
                     "profile_background": "Mostrar fondo del perfil",
                     "profile_background_description": "Muestra el degradado o la textura elegidos para el perfil de VRChat.",
                     "avatar_frame": "Mostrar marco del avatar",
@@ -2658,7 +2675,6 @@
                     "profile_effect_description": "Muestra el efecto aplicado al perfil del usuario.",
                     "nameplate_effect": "Mostrar efecto de la placa de nombre",
                     "nameplate_effect_description": "Muestra el efecto aplicado detrás del nombre visible.",
-                    "additional_information": "Información adicional",
                     "vrchat_notes": "Notas de VRChat",
                     "vrchat_notes_description": "Muestra las notas guardadas en VRChat",
                     "vrcx_memos": "Notas locales de VRCX-0",
@@ -2670,6 +2686,13 @@
                     "header": "Colores de usuario",
                     "random_colors_from_user_id": "Colores coherentes según el ID de usuario",
                     "random_colors_from_user_id_description": "Asigna un color constante a cada usuario según su ID.",
+                    "random_color_style": "Estilo de color",
+                    "random_color_styles": {
+                        "classic": "Clásico",
+                        "pastel": "Pastel",
+                        "warm": "Cálido",
+                        "cool": "Frío"
+                    },
                     "trust_colors": "Colores del nivel de confianza",
                     "trust_colors_description": "Personaliza los colores usados para los nombres por nivel de confianza.",
                     "trust_levels": {
@@ -3323,7 +3346,8 @@
                 "failed_to_create_local_favorite_group": "No se pudo crear el grupo de favoritos local",
                 "failed_to_copy_selected_favorites": "No se pudieron copiar los favoritos seleccionados",
                 "failed_to_move_selected_favorites": "No se pudieron mover los favoritos seleccionados",
-                "favorites_refresh_unavailable": "No se pueden actualizar los favoritos sin una cuenta con sesión iniciada"
+                "favorites_refresh_unavailable": "No se pueden actualizar los favoritos sin una cuenta con sesión iniciada",
+                "failed_to_save_order": "No se pudo guardar el orden"
             },
             "modal": {
                 "remove_local_favorite": "¿Eliminar el favorito local?",
@@ -3410,6 +3434,7 @@
                 "failed_to_delete_notification": "No se pudo eliminar la notificación",
                 "failed_to_accept_friend_request": "No se pudo aceptar la solicitud de amistad",
                 "failed_to_decline_notification": "No se pudo rechazar la notificación",
+                "failed_to_ignore_notification": "No se pudo ignorar la notificación",
                 "failed_to_send_invite": "No se pudo enviar la invitación",
                 "invite_response_photo_sent": "Respuesta con foto enviada",
                 "invite_response_sent": "Respuesta enviada",
@@ -5987,7 +6012,12 @@
             "vrchat_must_be_closed": "Debes cerrar VRChat antes de poder cambiar esta opción"
         },
         "error": "Error",
-        "update_success": "Actualización correcta"
+        "update_success": "Actualización correcta",
+        "external_link": {
+            "open_failed": "No se pudo abrir el enlace en el navegador",
+            "copy_link": "Copiar enlace",
+            "copied": "Enlace copiado al portapapeles"
+        }
     },
     "notifications": {
         "group_instance_opened": "Ha creado una nueva instancia",

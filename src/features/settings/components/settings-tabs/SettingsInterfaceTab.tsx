@@ -36,6 +36,7 @@ export function SettingsInterfaceTab() {
             weekStartsOn: state.weekStartsOn,
             feedTimeDisplayMode: state.feedTimeDisplayMode,
             randomUserColours: state.randomUserColours,
+            randomUserColourStyle: state.randomUserColourStyle,
             trustColor: state.trustColor
         }))
     );
@@ -72,6 +73,7 @@ export function SettingsInterfaceTab() {
         onWeekStartsOnChange,
         onFeedTimeDisplayModeChange,
         onRandomUserColoursChange,
+        onRandomUserColourStyleChange,
         onResetTrustColors,
         onSaveTrustColor,
         onTrustColorDraftChange
@@ -121,6 +123,7 @@ export function SettingsInterfaceTab() {
             <SettingsInterfaceUserColorsCard
                 prefs={prefs}
                 onRandomUserColoursChange={onRandomUserColoursChange}
+                onRandomUserColourStyleChange={onRandomUserColourStyleChange}
                 onResetTrustColors={onResetTrustColors}
                 onSaveTrustColor={onSaveTrustColor}
                 onTrustColorDraftChange={onTrustColorDraftChange}

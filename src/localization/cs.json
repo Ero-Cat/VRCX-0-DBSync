@@ -1468,7 +1468,8 @@
                 "local_favorite_group_renamed": "Lokální skupina oblíbených přejmenována",
                 "the_favorites_baseline_did_not_finish_loading": "Oblíbené položky se nenačetly celé",
                 "try_a_different_search_term": "Zkuste jiný hledaný výraz",
-                "online_favorites_copy_hint": "Online oblíbené položky lze přesouvat pouze mezi online skupinami. Položky, které jsou již online oblíbené, nelze zkopírovat do jiné online skupiny."
+                "online_favorites_copy_hint": "Online oblíbené položky lze přesouvat pouze mezi online skupinami. Položky, které jsou již online oblíbené, nelze zkopírovat do jiné online skupiny.",
+                "sort_by_custom": "Vlastní pořadí"
             },
             "success": {
                 "favorite_removed": "Odebráno z oblíbených",
@@ -1568,6 +1569,13 @@
                     "too_many": "Najednou můžeš sdílet nejvýše {cap} světů. Nejdřív tuto skupinu rozděl.",
                     "skipped": "Sdíleno. Přeskočeno {count} světů (nesynchronizované nebo neúplné)."
                 }
+            },
+            "order": {
+                "edit": "Upravit pořadí",
+                "exit_edit": "Hotovo",
+                "hint": "Přetažením karet změníte jejich pořadí, nebo je vyberte a přesuňte na začátek či na konec.",
+                "move_to_bottom": "Přesunout na konec",
+                "move_to_top": "Přesunout na začátek"
             }
         },
         "friend_log": {
@@ -1642,7 +1650,8 @@
                 "invite": "Pozvat",
                 "decline": "Odmítnout",
                 "delete_log": "Smazat upozornění",
-                "decline_with_message": "Odmítnout se zprávou"
+                "decline_with_message": "Odmítnout se zprávou",
+                "ignore_locally": "Ignorovat lokálně"
             },
             "filters": {
                 "requestInvite": "Žádost o pozvánku",
@@ -1727,7 +1736,8 @@
                 "invite_response_sent": "Odpověď odeslána",
                 "boop_sent": "Boop odeslán",
                 "notification_response_sent": "Hotovo",
-                "notification_log_entry_deleted": "Oznámení bylo odstraněno z historie"
+                "notification_log_entry_deleted": "Oznámení bylo odstraněno z historie",
+                "notification_ignored_locally": "Lokálně ignorováno"
             },
             "error": {
                 "cannot_invite_no_current_vrchat_location_is_available": "Nelze pozvat: aktuální lokace ve VRChat není k dispozici",
@@ -2653,9 +2663,16 @@
                         "placeholder": "Řazení"
                     }
                 },
+                "profile_appearance": {
+                    "header": "Vzhled profilu",
+                    "sidebar": "Postranní panel",
+                    "sidebar_avatar_frame": "Zobrazit rámeček avatara",
+                    "sidebar_avatar_frame_description": "Zobrazí dekorativní rámeček kolem avatarů v postranním panelu přátel.",
+                    "sidebar_nameplate": "Zobrazit jmenovku",
+                    "sidebar_nameplate_description": "Zobrazí jmenovku vpravo v řádcích postranního panelu přátel."
+                },
                 "user_dialog": {
                     "header": "Dialog uživatele",
-                    "profile_appearance": "Vzhled profilu",
                     "profile_background": "Zobrazit pozadí profilu",
                     "profile_background_description": "Zobrazí přechod nebo texturu vybranou pro profil ve VRChatu.",
                     "avatar_frame": "Zobrazit rámeček avatara",
@@ -2664,7 +2681,6 @@
                     "profile_effect_description": "Zobrazí efekt použitý na celý profil uživatele.",
                     "nameplate_effect": "Zobrazit efekt jmenovky",
                     "nameplate_effect_description": "Zobrazí efekt použitý za zobrazovaným jménem.",
-                    "additional_information": "Další informace",
                     "vrchat_notes": "VRChat poznámky",
                     "vrchat_notes_description": "Zobrazuje poznámky uložené ve VRChat",
                     "vrcx_memos": "VRCX-0 poznámky",
@@ -2676,6 +2692,13 @@
                     "header": "Uživatelské barvy",
                     "random_colors_from_user_id": "Náhodné barvy z uživatelského ID",
                     "random_colors_from_user_id_description": "Přiřadí každému uživateli konzistentní barvu na základě jeho ID.",
+                    "random_color_style": "Barevný styl",
+                    "random_color_styles": {
+                        "classic": "Klasický",
+                        "pastel": "Pastelový",
+                        "warm": "Teplý",
+                        "cool": "Studený"
+                    },
                     "trust_colors": "Barvy úrovní důvěry",
                     "trust_colors_description": "Přizpůsobí barvy použité pro jména podle úrovně důvěry.",
                     "trust_levels": {
@@ -3329,7 +3352,8 @@
                 "failed_to_create_local_favorite_group": "Nepodařilo se vytvořit lokální skupinu oblíbených",
                 "failed_to_copy_selected_favorites": "Nepodařilo se zkopírovat vybrané oblíbené položky",
                 "failed_to_move_selected_favorites": "Nepodařilo se přesunout vybrané oblíbené položky",
-                "favorites_refresh_unavailable": "Bez přihlášeného účtu nelze oblíbené položky obnovit"
+                "favorites_refresh_unavailable": "Bez přihlášeného účtu nelze oblíbené položky obnovit",
+                "failed_to_save_order": "Pořadí se nepodařilo uložit"
             },
             "modal": {
                 "remove_local_favorite": "Odebrat lokální oblíbenou položku?",
@@ -3420,6 +3444,7 @@
                 "failed_to_delete_notification": "Nepodařilo se odstranit upozornění",
                 "failed_to_accept_friend_request": "Nepodařilo se přijmout žádost o přátelství",
                 "failed_to_decline_notification": "Nepodařilo se odmítnout upozornění",
+                "failed_to_ignore_notification": "Oznámení se nepodařilo ignorovat",
                 "failed_to_send_invite": "Nepodařilo se odeslat pozvánku",
                 "invite_response_photo_sent": "Odpověď s fotografií odeslána",
                 "invite_response_sent": "Odpověď odeslána",
@@ -5955,7 +5980,12 @@
             "vrchat_must_be_closed": "Před změnou této možnosti je nutné zavřít VRChat"
         },
         "error": "Chyba",
-        "update_success": "Aktualizace úspěšná"
+        "update_success": "Aktualizace úspěšná",
+        "external_link": {
+            "open_failed": "Odkaz se nepodařilo otevřít v prohlížeči",
+            "copy_link": "Kopírovat odkaz",
+            "copied": "Odkaz zkopírován do schránky"
+        }
     },
     "notifications": {
         "group_instance_opened": "Vytvořena nová instance",

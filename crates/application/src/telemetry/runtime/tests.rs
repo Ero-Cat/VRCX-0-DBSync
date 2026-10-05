@@ -337,8 +337,21 @@ fn theme_mode_category_resolves_system_without_unknown() {
 fn helpers_normalize_config_and_dimension_values() {
     assert_eq!(normalize_enum_value(" On Demand "), "on_demand");
     assert_eq!(normalize_enum_value(""), "unknown");
-    assert_eq!(normalize_locale("zh_CN"), "zh-CN");
     assert_eq!(normalize_app_version(""), "unknown");
+}
+
+#[test]
+fn locale_reports_the_ui_language() {
+    let environment = Arc::new(FakeEnvironment::default());
+    let runtime = runtime(environment.clone(), Arc::new(FakeTransport::new(None)));
+
+    assert_eq!(runtime.locale(), "en");
+
+    environment.set("appLanguage", "zh_CN");
+    assert_eq!(runtime.locale(), "zh-CN");
+
+    environment.set("appLanguage", "ja");
+    assert_eq!(runtime.locale(), "ja");
 }
 
 #[tokio::test]

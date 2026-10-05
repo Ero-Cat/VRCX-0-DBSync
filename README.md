@@ -101,6 +101,7 @@ doesn't display properly, VRCX-0 turns it back off automatically. Setting
 
 - Questions and chat: [Discord](https://discord.gg/fehKP3SVPN)
 - Bug reports and feature requests: [GitHub Issues](https://github.com/Map1en/VRCX-0/issues)
+- Dev blog: [blog.vrcx-0.dev](https://blog.vrcx-0.dev/en/)
 
 ## Building from source
 

@@ -636,11 +636,6 @@ impl TelemetryRuntime {
 
     fn config_snapshot(&self, scale: TelemetryDatabaseScale) -> TelemetryConfigSnapshot {
         TelemetryConfigSnapshot {
-            background_mode_enabled: self.config_bool("backgroundModeEnabled", false),
-            wrist_overlay_enabled: self.config_bool("wristOverlayEnabled", false),
-            ovrt_wrist_notifications: self.config_bool("ovrtWristNotifications", false),
-            hmd_notifications_enabled: self.config_bool("hmdNotificationsEnabled", false),
-            webhook_enabled: self.config_bool("webhookEnabled", false),
             auto_state_change_enabled: has_enabled_rules(
                 &self.config_string("presenceAutomationContextRules", "[]"),
             ),
@@ -741,15 +736,12 @@ impl TelemetryRuntime {
 
     fn locale(&self) -> String {
         let app_language = self.config_string("appLanguage", "");
-        if !app_language.trim().is_empty() {
-            return normalize_locale(&app_language);
-        }
-        self.inner
-            .environment
-            .system_locale()
-            .map(|locale| normalize_locale(&locale))
-            .filter(|locale| !locale.trim().is_empty())
-            .unwrap_or_else(|| "unknown".into())
+        let language = if app_language.trim().is_empty() {
+            self.inner.environment.system_locale().unwrap_or_default()
+        } else {
+            app_language
+        };
+        vrcx_0_i18n::resolve_app_locale(&language)
     }
 
     fn theme_category(&self) -> String {
@@ -909,10 +901,6 @@ fn normalize_enum_value(value: &str) -> String {
     } else {
         normalized.to_string()
     }
-}
-
-fn normalize_locale(value: &str) -> String {
-    value.trim().replace('_', "-")
 }
 
 fn theme_mode_category(value: &str, system_theme: &str) -> &'static str {

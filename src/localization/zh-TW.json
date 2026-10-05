@@ -1458,7 +1458,8 @@
                 "local_favorite_group_renamed": "本機收藏群組已重新命名",
                 "the_favorites_baseline_did_not_finish_loading": "收藏尚未載入完成",
                 "try_a_different_search_term": "嘗試其他搜尋詞",
-                "online_favorites_copy_hint": "線上收藏只能在各個線上群組之間移動。已在線上收藏的項目無法複製到另一個線上群組。"
+                "online_favorites_copy_hint": "線上收藏只能在各個線上群組之間移動。已在線上收藏的項目無法複製到另一個線上群組。",
+                "sort_by_custom": "自訂順序"
             },
             "success": {
                 "favorite_removed": "收藏已移除",
@@ -1556,6 +1557,13 @@
                     "too_many": "你一次最多可以分享 {cap} 個世界。請先拆分這個群組。",
                     "skipped": "已分享。已跳過 {count} 個世界（未同步或資訊不完整）。"
                 }
+            },
+            "order": {
+                "edit": "編輯排序",
+                "exit_edit": "完成",
+                "hint": "拖曳卡片調整順序，或選取後置頂、置底。",
+                "move_to_bottom": "置底",
+                "move_to_top": "置頂"
             }
         },
         "friend_log": {
@@ -1630,7 +1638,8 @@
                 "invite": "邀請",
                 "decline": "拒絕",
                 "delete_log": "刪除通知",
-                "decline_with_message": "拒絕並附上訊息"
+                "decline_with_message": "拒絕並附上訊息",
+                "ignore_locally": "僅在本機忽略"
             },
             "filters": {
                 "requestInvite": "請求邀請",
@@ -1715,7 +1724,8 @@
                 "invite_response_sent": "已發送回覆",
                 "boop_sent": "已傳送戳戳",
                 "notification_response_sent": "完成",
-                "notification_log_entry_deleted": "通知已從歷史紀錄中移除"
+                "notification_log_entry_deleted": "通知已從歷史紀錄中移除",
+                "notification_ignored_locally": "已在本機忽略"
             },
             "error": {
                 "cannot_invite_no_current_vrchat_location_is_available": "無法邀請：你目前不在任何房間中",
@@ -2731,9 +2741,16 @@
                         "placeholder": "排序順序"
                     }
                 },
+                "profile_appearance": {
+                    "header": "個人資料外觀",
+                    "sidebar": "側邊欄",
+                    "sidebar_avatar_frame": "顯示頭像框",
+                    "sidebar_avatar_frame_description": "在好友側邊欄的頭像周圍顯示裝飾框。",
+                    "sidebar_nameplate": "顯示名牌",
+                    "sidebar_nameplate_description": "在好友側邊欄每一列的右側顯示名牌。"
+                },
                 "user_dialog": {
                     "header": "用戶資訊",
-                    "profile_appearance": "個人資料外觀",
                     "profile_background": "顯示個人資料背景",
                     "profile_background_description": "顯示玩家設定的漸層或材質背景。",
                     "avatar_frame": "顯示頭像框",
@@ -2742,7 +2759,6 @@
                     "profile_effect_description": "顯示覆蓋在玩家資訊上的個人資料特效。",
                     "nameplate_effect": "顯示名牌特效",
                     "nameplate_effect_description": "顯示玩家名稱後方的名牌特效。",
-                    "additional_information": "其他資訊",
                     "vrchat_notes": "VRChat 備註",
                     "vrchat_notes_description": "顯示儲存在 VRChat 中的備註",
                     "vrcx_memos": "本機備註",
@@ -2754,6 +2770,13 @@
                     "header": "用戶名稱顏色",
                     "random_colors_from_user_id": "從用戶 ID 隨機挑選顏色",
                     "random_colors_from_user_id_description": "根據用戶 ID 為每位用戶指派固定顏色。",
+                    "random_color_style": "配色風格",
+                    "random_color_styles": {
+                        "classic": "經典",
+                        "pastel": "柔和",
+                        "warm": "暖色",
+                        "cool": "冷色"
+                    },
                     "trust_colors": "信任等級顏色",
                     "trust_colors_description": "調整按信任等級顯示的用戶名稱顏色。",
                     "trust_levels": {
@@ -3407,7 +3430,8 @@
                 "failed_to_create_local_favorite_group": "建立本機收藏群組失敗",
                 "failed_to_copy_selected_favorites": "複製所選收藏失敗",
                 "failed_to_move_selected_favorites": "移動所選收藏失敗",
-                "favorites_refresh_unavailable": "若未登入帳號，則無法刷新「我的最愛」"
+                "favorites_refresh_unavailable": "若未登入帳號，則無法刷新「我的最愛」",
+                "failed_to_save_order": "儲存順序失敗"
             },
             "modal": {
                 "remove_local_favorite": "移除本機收藏？",
@@ -3494,6 +3518,7 @@
                 "failed_to_delete_notification": "刪除通知失敗",
                 "failed_to_accept_friend_request": "接受好友請求失敗",
                 "failed_to_decline_notification": "拒絕通知失敗",
+                "failed_to_ignore_notification": "忽略通知失敗",
                 "failed_to_send_invite": "傳送邀請失敗",
                 "invite_response_photo_sent": "已發送照片回覆",
                 "invite_response_sent": "已發送回覆",
@@ -6062,7 +6087,12 @@
             "vrchat_must_be_closed": "必須先關閉 VRChat 才能變更此設定"
         },
         "error": "錯誤",
-        "update_success": "更新成功"
+        "update_success": "更新成功",
+        "external_link": {
+            "open_failed": "無法在瀏覽器中開啟連結",
+            "copy_link": "複製連結",
+            "copied": "已將連結複製到剪貼簿"
+        }
     },
     "notifications": {
         "has_joined": "已加入",

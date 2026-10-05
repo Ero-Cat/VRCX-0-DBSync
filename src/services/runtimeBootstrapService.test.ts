@@ -1,7 +1,6 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 const mocks = vi.hoisted(() => ({
-    getTimeUnitLabels: vi.fn(),
     setI18nLanguage: vi.fn(),
     bindRuntimeEvents: vi.fn(),
     initializeReactRuntime: vi.fn(),
@@ -11,7 +10,6 @@ const mocks = vi.hoisted(() => ({
 }));
 
 vi.mock('./i18nService', () => ({
-    getTimeUnitLabels: mocks.getTimeUnitLabels,
     setI18nLanguage: mocks.setI18nLanguage
 }));
 
@@ -35,7 +33,7 @@ vi.mock('./vrcStatusService', () => ({
     hydrateVrcStatus: mocks.hydrateVrcStatus
 }));
 
-import { DEFAULT_TIME_UNIT_LABELS, useShellStore } from '@/state/shellStore';
+import { useShellStore } from '@/state/shellStore';
 
 import {
     startI18nLanguageSync,
@@ -67,16 +65,7 @@ describe('runtimeBootstrapService', () => {
     beforeEach(() => {
         installDocumentStub();
         vi.clearAllMocks();
-        useShellStore.setState({
-            locale: 'en',
-            timeUnitLabels: DEFAULT_TIME_UNIT_LABELS
-        });
-        mocks.getTimeUnitLabels.mockImplementation(
-            (locale: string, fallback: typeof DEFAULT_TIME_UNIT_LABELS) => ({
-                ...fallback,
-                h: `${locale}:h`
-            })
-        );
+        useShellStore.setState({ locale: 'en' });
         mocks.setI18nLanguage.mockResolvedValue(undefined);
         mocks.initializeReactRuntime.mockResolvedValue(undefined);
         mocks.bindRuntimeEvents.mockResolvedValue(undefined);
@@ -94,9 +83,6 @@ describe('runtimeBootstrapService', () => {
             'zh-TW'
         );
         expect(mocks.setI18nLanguage).toHaveBeenCalledWith('zh-TW');
-        await vi.waitFor(() =>
-            expect(useShellStore.getState().timeUnitLabels.h).toBe('zh-TW:h')
-        );
 
         useShellStore.getState().setLocale('en-US');
 
@@ -105,34 +91,10 @@ describe('runtimeBootstrapService', () => {
             'en'
         );
         expect(mocks.setI18nLanguage).toHaveBeenLastCalledWith('en');
-        await vi.waitFor(() =>
-            expect(useShellStore.getState().timeUnitLabels.h).toBe('en:h')
-        );
 
         cleanup();
         useShellStore.getState().setLocale('zh_CN');
         expect(mocks.setI18nLanguage).toHaveBeenCalledTimes(2);
-    });
-
-    it('ignores a stale locale load that resolves after a newer switch', async () => {
-        const staleLoad = deferred<void>();
-        mocks.setI18nLanguage.mockImplementation((locale: string) =>
-            locale === 'ja' ? staleLoad.promise : Promise.resolve()
-        );
-        useShellStore.getState().setLocale('ja');
-        const cleanup = startI18nLanguageSync();
-
-        useShellStore.getState().setLocale('ko');
-        await vi.waitFor(() =>
-            expect(useShellStore.getState().timeUnitLabels.h).toBe('ko:h')
-        );
-
-        staleLoad.resolve();
-        await staleLoad.promise;
-        await Promise.resolve();
-
-        expect(useShellStore.getState().timeUnitLabels.h).toBe('ko:h');
-        cleanup();
     });
 
     it('shares React runtime startup across consumers', async () => {

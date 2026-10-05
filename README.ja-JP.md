@@ -87,6 +87,7 @@ macOS で初回起動がブロックされた場合は、**システム設定 �
 
 - 質問・交流：[Discord](https://discord.gg/fehKP3SVPN)
 - 不具合報告・機能リクエスト：[GitHub Issues](https://github.com/Map1en/VRCX-0/issues)
+- 開発ブログ：[blog.vrcx-0.dev](https://blog.vrcx-0.dev/ja/)
 
 ## ソースからビルド
 

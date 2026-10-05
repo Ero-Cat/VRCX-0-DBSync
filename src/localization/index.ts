@@ -41,12 +41,6 @@ const pendingLocales = new Map<string, Promise<LocalizedStringTable>>();
 export const FALLBACK_LOCALE_CODE = 'en';
 export const fallbackLocaleMessages: LocalizedStringTable = enMessages;
 
-export function getLoadedLocaleMessages(
-    code: string
-): LocalizedStringTable | undefined {
-    return loadedLocales.get(code);
-}
-
 export function loadLocaleMessages(
     code: string
 ): Promise<LocalizedStringTable> {

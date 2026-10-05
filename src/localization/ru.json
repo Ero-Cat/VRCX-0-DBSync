@@ -1468,7 +1468,8 @@
                 "local_favorite_group_renamed": "Местная избранная группа",
                 "the_favorites_baseline_did_not_finish_loading": "Избранное загрузилось не полностью",
                 "try_a_different_search_term": "Попробуйте другой термин поиска",
-                "online_favorites_copy_hint": "Онлайн-избранное можно перемещать только между онлайн-группами. Элементы, уже добавленные в онлайн-избранное, нельзя скопировать в другую онлайн-группу."
+                "online_favorites_copy_hint": "Онлайн-избранное можно перемещать только между онлайн-группами. Элементы, уже добавленные в онлайн-избранное, нельзя скопировать в другую онлайн-группу.",
+                "sort_by_custom": "Свой порядок"
             },
             "success": {
                 "favorite_removed": "Избранный удаляется",
@@ -1566,6 +1567,13 @@
                     "too_many": "За один раз можно поделиться не более чем {cap} мирами. Сначала разделите эту группу.",
                     "skipped": "Опубликовано. Пропущено {count} миров (не синхронизированы или данные неполные)."
                 }
+            },
+            "order": {
+                "edit": "Изменить порядок",
+                "exit_edit": "Готово",
+                "hint": "Перетаскивайте карточки, чтобы изменить порядок, или выделите их и переместите в начало или в конец.",
+                "move_to_bottom": "В конец",
+                "move_to_top": "В начало"
             }
         },
         "friend_log": {
@@ -1640,7 +1648,8 @@
                 "invite": "Приглашение",
                 "decline": "Отклонить",
                 "delete_log": "Удалить уведомление",
-                "decline_with_message": "Отклонить с сообщением"
+                "decline_with_message": "Отклонить с сообщением",
+                "ignore_locally": "Игнорировать локально"
             },
             "filters": {
                 "requestInvite": "Запрос на приглашение",
@@ -1725,7 +1734,8 @@
                 "invite_response_sent": "Ответ отправлен",
                 "boop_sent": "Буп отправлен",
                 "notification_response_sent": "Готово",
-                "notification_log_entry_deleted": "Уведомление удалено из истории"
+                "notification_log_entry_deleted": "Уведомление удалено из истории",
+                "notification_ignored_locally": "Проигнорировано локально"
             },
             "error": {
                 "cannot_invite_no_current_vrchat_location_is_available": "Невозможно пригласить: нет доступного текущего местоположения VRChat",
@@ -2651,9 +2661,16 @@
                         "placeholder": "Порядок сортировки"
                     }
                 },
+                "profile_appearance": {
+                    "header": "Внешний вид профиля",
+                    "sidebar": "Боковая панель",
+                    "sidebar_avatar_frame": "Показывать рамку аватара",
+                    "sidebar_avatar_frame_description": "Показывает декоративную рамку вокруг аватаров в боковой панели друзей.",
+                    "sidebar_nameplate": "Показывать именную табличку",
+                    "sidebar_nameplate_description": "Показывает именную табличку справа в строках боковой панели друзей."
+                },
                 "user_dialog": {
                     "header": "Меню пользователя",
-                    "profile_appearance": "Внешний вид профиля",
                     "profile_background": "Показывать фон профиля",
                     "profile_background_description": "Показывает градиент или текстуру, выбранные для профиля VRChat.",
                     "avatar_frame": "Показывать рамку аватара",
@@ -2662,7 +2679,6 @@
                     "profile_effect_description": "Показывает эффект, применённый ко всему профилю пользователя.",
                     "nameplate_effect": "Показывать эффект именной таблички",
                     "nameplate_effect_description": "Показывает эффект за отображаемым именем.",
-                    "additional_information": "Дополнительная информация",
                     "vrchat_notes": "Заметки VRChat",
                     "vrchat_notes_description": "Показать записи, хранящиеся в VRChat",
                     "vrcx_memos": "Заметки VRCX-0",
@@ -2674,6 +2690,13 @@
                     "header": "Пользовательские цвета",
                     "random_colors_from_user_id": "Случайные цвета из ID пользователя",
                     "random_colors_from_user_id_description": "Назначьте каждому пользователю последовательный цвет на основе его идентификатора.",
+                    "random_color_style": "Цветовая гамма",
+                    "random_color_styles": {
+                        "classic": "Классическая",
+                        "pastel": "Пастельная",
+                        "warm": "Тёплая",
+                        "cool": "Холодная"
+                    },
                     "trust_colors": "Цвета доверительного уровня",
                     "trust_colors_description": "Настроить цвета, используемые для доверенных имен.",
                     "trust_levels": {
@@ -3327,7 +3350,8 @@
                 "failed_to_create_local_favorite_group": "Не удалось создать местную избранную группу",
                 "failed_to_copy_selected_favorites": "Не удалось скопировать выбранные элементы избранного",
                 "failed_to_move_selected_favorites": "Не удалось перенести выбранные элементы избранного",
-                "favorites_refresh_unavailable": "Не удаётся обновить избранное без входа в аккаунт"
+                "favorites_refresh_unavailable": "Не удаётся обновить избранное без входа в аккаунт",
+                "failed_to_save_order": "Не удалось сохранить порядок"
             },
             "modal": {
                 "remove_local_favorite": "Удалить локальное избранное?",
@@ -3414,6 +3438,7 @@
                 "failed_to_delete_notification": "Не удалось удалить уведомление",
                 "failed_to_accept_friend_request": "Не удалось принять заявку в друзья",
                 "failed_to_decline_notification": "Не удалось отклонить уведомление",
+                "failed_to_ignore_notification": "Не удалось проигнорировать уведомление",
                 "failed_to_send_invite": "Не удалось отправить приглашение",
                 "invite_response_photo_sent": "Ответ с фотографией отправлен",
                 "invite_response_sent": "Ответ отправлен",
@@ -5949,7 +5974,12 @@
             "vrchat_must_be_closed": "VRChat должен быть закрыт до того, как этот вариант может быть изменен"
         },
         "error": "Ошибка",
-        "update_success": "Успешное обновление"
+        "update_success": "Успешное обновление",
+        "external_link": {
+            "open_failed": "Не удалось открыть ссылку в браузере",
+            "copy_link": "Копировать ссылку",
+            "copied": "Ссылка скопирована в буфер обмена"
+        }
     },
     "notifications": {
         "group_instance_opened": "Создан новый инстанс",

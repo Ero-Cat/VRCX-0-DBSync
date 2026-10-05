@@ -1458,7 +1458,8 @@
                 "local_favorite_group_renamed": "重命名本地收藏分组成功",
                 "the_favorites_baseline_did_not_finish_loading": "收藏分组数据尚未加载完成",
                 "try_a_different_search_term": "尝试其他搜索词",
-                "online_favorites_copy_hint": "VRChat 收藏只能在 VRChat 分组之间移动；已在 VRChat 中收藏的项目不能再复制到其他 VRChat 分组。"
+                "online_favorites_copy_hint": "VRChat 收藏只能在 VRChat 分组之间移动；已在 VRChat 中收藏的项目不能再复制到其他 VRChat 分组。",
+                "sort_by_custom": "自定义顺序"
             },
             "success": {
                 "favorite_removed": "已移除收藏",
@@ -1556,6 +1557,13 @@
                     "too_many": "单次分享最多 {cap} 个世界，请先拆分该分组。",
                     "skipped": "已分享，跳过 {count} 个世界（未同步或信息不完整）。"
                 }
+            },
+            "order": {
+                "edit": "编辑排序",
+                "exit_edit": "完成",
+                "hint": "拖动卡片调整顺序，或选中后置顶、置底。",
+                "move_to_bottom": "置底",
+                "move_to_top": "置顶"
             }
         },
         "friend_log": {
@@ -1630,7 +1638,8 @@
                 "invite": "邀请",
                 "decline": "拒绝",
                 "delete_log": "删除通知",
-                "decline_with_message": "拒绝并回复"
+                "decline_with_message": "拒绝并回复",
+                "ignore_locally": "仅本地忽略"
             },
             "filters": {
                 "requestInvite": "申请加入",
@@ -1715,7 +1724,8 @@
                 "invite_response_sent": "已发送拒绝回复",
                 "boop_sent": "已发送戳一戳",
                 "notification_response_sent": "已发送通知回应",
-                "notification_log_entry_deleted": "已删除通知日志条目"
+                "notification_log_entry_deleted": "已删除通知日志条目",
+                "notification_ignored_locally": "已在本地忽略"
             },
             "error": {
                 "cannot_invite_no_current_vrchat_location_is_available": "无法邀请：你当前不在房间中",
@@ -2731,9 +2741,16 @@
                         "placeholder": "排序依据"
                     }
                 },
+                "profile_appearance": {
+                    "header": "个人资料外观",
+                    "sidebar": "侧边栏",
+                    "sidebar_avatar_frame": "显示头像框",
+                    "sidebar_avatar_frame_description": "在好友侧边栏的头像周围显示装饰框。",
+                    "sidebar_nameplate": "显示名牌",
+                    "sidebar_nameplate_description": "在好友侧边栏每一行的右侧显示名牌。"
+                },
                 "user_dialog": {
                     "header": "玩家信息",
-                    "profile_appearance": "个人资料外观",
                     "profile_background": "显示个人资料背景",
                     "profile_background_description": "显示玩家设置的渐变或纹理背景。",
                     "avatar_frame": "显示头像框",
@@ -2742,7 +2759,6 @@
                     "profile_effect_description": "显示覆盖在玩家信息上的个人资料特效。",
                     "nameplate_effect": "显示名牌特效",
                     "nameplate_effect_description": "显示昵称背后的名牌特效。",
-                    "additional_information": "其他信息",
                     "vrchat_notes": "显示线上备注",
                     "vrchat_notes_description": "显示 VRChat 服务器上保存的备注",
                     "vrcx_memos": "显示本地备注",
@@ -2754,6 +2770,13 @@
                     "header": "好友名称显示颜色",
                     "random_colors_from_user_id": "从玩家 ID 随机挑选颜色",
                     "random_colors_from_user_id_description": "根据 ID 为每个玩家分配一个随机颜色。",
+                    "random_color_style": "配色风格",
+                    "random_color_styles": {
+                        "classic": "经典",
+                        "pastel": "柔和",
+                        "warm": "暖色",
+                        "cool": "冷色"
+                    },
                     "trust_colors": "信誉等级颜色",
                     "trust_colors_description": "调整按信誉等级显示的玩家名称颜色。",
                     "trust_levels": {
@@ -3407,7 +3430,8 @@
                 "failed_to_create_local_favorite_group": "创建本地收藏分组失败",
                 "failed_to_copy_selected_favorites": "复制所选收藏失败",
                 "failed_to_move_selected_favorites": "移动所选收藏失败",
-                "favorites_refresh_unavailable": "尚未登录账号，暂时无法刷新收藏"
+                "favorites_refresh_unavailable": "尚未登录账号，暂时无法刷新收藏",
+                "failed_to_save_order": "保存顺序失败"
             },
             "modal": {
                 "remove_local_favorite": "移除本地收藏？",
@@ -3494,6 +3518,7 @@
                 "failed_to_delete_notification": "删除通知失败",
                 "failed_to_accept_friend_request": "接受好友请求失败",
                 "failed_to_decline_notification": "拒绝通知失败",
+                "failed_to_ignore_notification": "忽略通知失败",
                 "failed_to_send_invite": "发送邀请失败",
                 "invite_response_photo_sent": "照片回复已发送",
                 "invite_response_sent": "回复已发送",
@@ -6071,7 +6096,12 @@
             "vrchat_must_be_closed": "必须关闭 VRChat 客户端后才能修改日志设置"
         },
         "error": "错误",
-        "update_success": "更新成功"
+        "update_success": "更新成功",
+        "external_link": {
+            "open_failed": "无法在浏览器中打开链接",
+            "copy_link": "复制链接",
+            "copied": "链接已复制到剪贴板"
+        }
     },
     "notifications": {
         "has_joined": "加入了房间",

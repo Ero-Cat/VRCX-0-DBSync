@@ -87,6 +87,7 @@ macOS에서 처음 실행이 차단되면 **시스템 설정 → 개인정보 �
 
 - 질문 및 소통: [Discord](https://discord.gg/fehKP3SVPN)
 - 버그 제보 및 기능 요청: [GitHub Issues](https://github.com/Map1en/VRCX-0/issues)
+- 개발 블로그: [blog.vrcx-0.dev](https://blog.vrcx-0.dev/en/)
 
 ## 소스에서 빌드
 

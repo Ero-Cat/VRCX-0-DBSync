@@ -1401,7 +1401,8 @@
                 "local_favorite_group_renamed": "로컬 즐겨찾기 그룹 이름이 변경됨",
                 "the_favorites_baseline_did_not_finish_loading": "즐겨찾기를 모두 불러오지 못했습니다.",
                 "try_a_different_search_term": "다른 검색어를 사용해 보세요.",
-                "online_favorites_copy_hint": "VRChat 즐겨찾기는 VRChat 그룹 간에만 이동할 수 있습니다. 이미 VRChat 즐겨찾기에 있는 항목은 다른 VRChat 그룹으로 복사할 수 없습니다."
+                "online_favorites_copy_hint": "VRChat 즐겨찾기는 VRChat 그룹 간에만 이동할 수 있습니다. 이미 VRChat 즐겨찾기에 있는 항목은 다른 VRChat 그룹으로 복사할 수 없습니다.",
+                "sort_by_custom": "사용자 지정 순서"
             },
             "success": {
                 "favorite_removed": "즐겨찾기가 삭제되었습니다.",
@@ -1499,6 +1500,13 @@
                     "too_many": "한 번에 최대 {cap}개의 월드를 공유할 수 있습니다. 그룹을 먼저 나눠 주세요.",
                     "skipped": "공유했습니다. {count}개의 월드를 건너뛰었습니다(동기화되지 않았거나 정보가 불완전함)."
                 }
+            },
+            "order": {
+                "edit": "순서 편집",
+                "exit_edit": "완료",
+                "hint": "카드를 드래그해 순서를 바꾸거나, 선택한 뒤 맨 위나 맨 아래로 옮길 수 있습니다.",
+                "move_to_bottom": "맨 아래로 이동",
+                "move_to_top": "맨 위로 이동"
             }
         },
         "friend_log": {
@@ -1573,7 +1581,8 @@
                 "invite": "초대",
                 "decline": "거절",
                 "delete_log": "알림 삭제",
-                "decline_with_message": "메시지로 거절"
+                "decline_with_message": "메시지로 거절",
+                "ignore_locally": "로컬에서만 무시"
             },
             "filters": {
                 "requestInvite": "참가 요청",
@@ -1658,7 +1667,8 @@
                 "invite_response_sent": "답장을 보냈습니다.",
                 "boop_sent": "콕찌르기를 보냈습니다",
                 "notification_response_sent": "응답을 보냈습니다.",
-                "notification_log_entry_deleted": "알림을 기록에서 삭제했습니다."
+                "notification_log_entry_deleted": "알림을 기록에서 삭제했습니다.",
+                "notification_ignored_locally": "로컬에서 무시했습니다."
             },
             "error": {
                 "cannot_invite_no_current_vrchat_location_is_available": "초대할 수 없습니다. 지금 인스턴스에 있지 않습니다.",
@@ -2584,9 +2594,16 @@
                         "placeholder": "정렬 순서"
                     }
                 },
+                "profile_appearance": {
+                    "header": "프로필 외형",
+                    "sidebar": "사이드바",
+                    "sidebar_avatar_frame": "아이콘 프레임 표시",
+                    "sidebar_avatar_frame_description": "친구 사이드바의 아이콘 주위에 프레임을 표시합니다.",
+                    "sidebar_nameplate": "이름표 표시",
+                    "sidebar_nameplate_description": "친구 사이드바의 각 행 오른쪽에 이름표를 표시합니다."
+                },
                 "user_dialog": {
                     "header": "사용자 정보 대화 상자",
-                    "profile_appearance": "프로필 외형",
                     "profile_background": "프로필 배경 표시",
                     "profile_background_description": "VRChat 프로필에 설정된 그라데이션 또는 텍스처 배경을 표시합니다.",
                     "avatar_frame": "아이콘 프레임 표시",
@@ -2595,7 +2612,6 @@
                     "profile_effect_description": "사용자 프로필 전체에 적용된 효과를 표시합니다.",
                     "nameplate_effect": "이름표 효과 표시",
                     "nameplate_effect_description": "표시 이름 뒤에 적용된 이름표 효과를 표시합니다.",
-                    "additional_information": "기타 정보",
                     "vrchat_notes": "VRChat 메모",
                     "vrchat_notes_description": "VRChat에 저장된 메모를 표시합니다.",
                     "vrcx_memos": "로컬 메모",
@@ -2607,6 +2623,13 @@
                     "header": "사용자 색상",
                     "random_colors_from_user_id": "사용자별 고정 색상 사용",
                     "random_colors_from_user_id_description": "ID를 기반으로 각 사용자에게 일관된 색상을 할당합니다.",
+                    "random_color_style": "색상 스타일",
+                    "random_color_styles": {
+                        "classic": "클래식",
+                        "pastel": "파스텔",
+                        "warm": "따뜻한 톤",
+                        "cool": "차가운 톤"
+                    },
                     "trust_colors": "신뢰 등급 색상",
                     "trust_colors_description": "신뢰 등급 이름에 사용되는 색상을 사용자 정의합니다.",
                     "trust_levels": {
@@ -3260,7 +3283,8 @@
                 "failed_to_create_local_favorite_group": "로컬 즐겨찾기 그룹을 생성하지 못했습니다.",
                 "failed_to_copy_selected_favorites": "선택한 즐겨찾기를 복사하지 못했습니다.",
                 "failed_to_move_selected_favorites": "선택한 즐겨찾기를 이동하지 못했습니다.",
-                "favorites_refresh_unavailable": "로그인된 계정이 없어 즐겨찾기를 새로고침할 수 없습니다"
+                "favorites_refresh_unavailable": "로그인된 계정이 없어 즐겨찾기를 새로고침할 수 없습니다",
+                "failed_to_save_order": "순서를 저장하지 못했습니다."
             },
             "modal": {
                 "remove_local_favorite": "로컬 즐겨찾기를 삭제하시겠습니까?",
@@ -3347,6 +3371,7 @@
                 "failed_to_delete_notification": "알림을 삭제하지 못했습니다.",
                 "failed_to_accept_friend_request": "친구 요청을 수락하지 못했습니다.",
                 "failed_to_decline_notification": "알림을 거절하지 못했습니다.",
+                "failed_to_ignore_notification": "알림을 무시하지 못했습니다.",
                 "failed_to_send_invite": "초대장을 보내지 못했습니다.",
                 "invite_response_photo_sent": "사진으로 답장했습니다.",
                 "invite_response_sent": "답장을 보냈습니다.",
@@ -5925,7 +5950,12 @@
             "vrchat_must_be_closed": "이 옵션을 변경하려면 VRChat을 닫아야 합니다."
         },
         "error": "오류",
-        "update_success": "업데이트 성공"
+        "update_success": "업데이트 성공",
+        "external_link": {
+            "open_failed": "브라우저에서 링크를 열 수 없습니다",
+            "copy_link": "링크 복사",
+            "copied": "링크를 클립보드에 복사했습니다"
+        }
     },
     "notifications": {
         "has_joined": "입장했습니다",
